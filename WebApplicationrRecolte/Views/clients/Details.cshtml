@@ -1,0 +1,75 @@
+﻿@model WebApplicationrRecolte.Models.client
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CNI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_client)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_client)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRENOM_client)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRENOM_client)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TEL_client)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEL_client)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATE_insertion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE_insertion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.association.NOM_association)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.association.NOM_association)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.colline.NOM_colline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.colline.NOM_colline)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_client }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

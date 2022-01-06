@@ -1,0 +1,115 @@
+﻿@model WebApplicationrRecolte.Models.association
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+<div class="main-panel">
+    <div class="container">
+
+        <div class="panel-header bg-primary-gradient">
+            <div class="page-inner py-3">
+                <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+                    <div>
+                        <h2 class="text-white pb-2 fw-bold">
+                            ASSOCIATION</
+                            h2>
+                    </div>
+                    <div class="ml-md-auto py-2 py-md-0">
+                        <!-- PAGE-HEADER -->
+                        <div class="page-header">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="#">ASSOCIATION</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Ajouter
+                                </li>
+                            </ol>
+                        </div>
+                        <!-- PAGE-HEADER END -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Ajouter une nouvelle association</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label> Provinces :</label>
+                        @Html.DropDownList("ID_province", null, "Selectionnez le province", htmlAttributes: new { @class = "form-control " })
+
+                    </div>
+                    <div class="form-group">
+                        <label> Commune :</label>
+                        @Html.DropDownList("ID_commune", new SelectList(new List<string>()), "Selectionnez le commune", htmlAttributes: new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label> zone:</label>
+                        @Html.DropDownList("ID_zone", new SelectList(new List<string>()), "Selectionnez zone", htmlAttributes: new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label> colline:</label>
+                        @Html.DropDownList("ID_colline", new SelectList(new List<string>()), "Selectionnez colline", htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ID_colline, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NOM_association, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.NOM_association, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.NOM_association, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TEL_association, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.TEL_association, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.TEL_association, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DATE_association, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.DATE_association, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.DATE_association, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-success pull-right" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div>
+                @Html.ActionLink("Retour", "Index")
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+

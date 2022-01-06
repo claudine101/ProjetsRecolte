@@ -1,0 +1,52 @@
+﻿@model IEnumerable<WebApplicationrRecolte.Models.station_lavage>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOM_station)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEL_station)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATE_insertion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zone.NOM_zone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM_station)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEL_station)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATE_insertion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zone.NOM_zone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_station }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_station }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_station })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,51 @@
+﻿@model WebApplicationrRecolte.Models.association
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>association</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_association)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_association)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TEL_association)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEL_association)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATE_association)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE_association)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.colline.NOM_colline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.colline.NOM_colline)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_association }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

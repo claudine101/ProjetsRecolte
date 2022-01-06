@@ -1,0 +1,57 @@
+﻿@model WebApplicationrRecolte.Models.association
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>association</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_association)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_association)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TEL_association)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEL_association)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATE_association)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE_association)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.colline.NOM_colline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.colline.NOM_colline)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

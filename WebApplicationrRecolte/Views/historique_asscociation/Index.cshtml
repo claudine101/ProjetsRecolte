@@ -1,0 +1,89 @@
+﻿@model IEnumerable<WebApplicationrRecolte.Models.historique_asscociation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+<div class="main-panel">
+    <div class="container">
+
+        <div class="panel-header bg-primary-gradient">
+            <div class="page-inner py-3">
+                <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+                    <div>
+                        <h2 class="text-white pb-2 fw-bold">
+                            HISTORIQUE  DES ASSOCIATIONS</
+                            h2>
+</div>
+                    <div class="ml-md-auto py-2 py-md-0">
+                        <!-- PAGE-HEADER -->
+                        <div class="page-header">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="#">HISTORIQUE  DES ASSOCIATIONS</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Liste
+                                </li>
+                            </ol>
+                        </div>
+                        <!-- PAGE-HEADER END -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <a href="@Url.Action("create","historique_asscociation")" class=" btn btn-sm  btn-success pull-right  " style="margin-top:5px; margin-bottom:5px"><i class="fa fa-plus mr-2"></i>Désactive une association</a>
+            <table class="table table-bordered">
+                <tr>
+                    <th>NOM</th>
+                    <th>TEL</th>
+                    <th> DATE DE CREATION</th>
+                    <th> DATE DE DESACTIVATION</th>
+                    <th>ETAT</th>
+                    <th>OPTIONS</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.association.NOM_association)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.association.TEL_association)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.association.DATE_association)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DATE_desactive)
+                        </td>
+                        <td>
+                            Inactif
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <span class="dropdown-toggle dropdown-bg btn btn-outline-primary" role="button" id="dropdownMenuButton5"
+                                      data-toggle="dropdown" aria-expanded="false">
+                                    Actions
+                                </span>
+                                <div class="dropdown-menu dropdown-menu-right shadow-none" aria-labelledby="dropdownMenuButton5">
+                                    @Html.ActionLink("Modifier", "Details", new { id = item.ID_histoAssoc }, new { @class = "btn btn-sm btn-success " })
+                                    @Html.ActionLink("Active", "Delete", new { id = item.ID_histoAssoc }, new { @class = "btn btn-sm btn-danger" })
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+
+
+
+
+

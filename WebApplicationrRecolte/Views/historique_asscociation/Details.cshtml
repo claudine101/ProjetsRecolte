@@ -1,0 +1,35 @@
+﻿@model WebApplicationrRecolte.Models.historique_asscociation
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>historique_asscociation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DATE_desactive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE_desactive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.association.NOM_association)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.association.NOM_association)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_histoAssoc }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

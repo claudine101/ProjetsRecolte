@@ -1,0 +1,51 @@
+﻿@model WebApplicationrRecolte.Models.station_lavage
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>station_lavage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_station)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_station)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TEL_station)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEL_station)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATE_insertion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE_insertion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.zone.NOM_zone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zone.NOM_zone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_station }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

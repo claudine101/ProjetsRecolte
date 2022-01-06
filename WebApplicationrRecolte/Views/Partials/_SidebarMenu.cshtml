@@ -1,0 +1,173 @@
+﻿@{
+    ViewBag.Title = "_SidebarMenu";
+}
+<div class="sidebar sidebar-style-2">			
+<div class="sidebar-wrapper scrollbar scrollbar-inner">
+	<div class="sidebar-content">
+		<div class="user">
+            
+			@*<?php 
+			   $memb=$this->Model->readOne('membre', ['ID_MEMBRE'=> $this->session->userdata('memberid')]);
+
+				?>*@
+			<div class="avatar-sm float-left mr-2">
+				@*<img src="<?= base_url('assets/photo/Profile/').$memb['IMAGE'];?>" alt="..." class="avatar-img rounded-circle">*@
+			</div>
+			<div class="info">
+				<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+					<span>
+						@*<h1><?= $this->session->userdata('prenom') ?></h1>*@
+						<span class="user-level">Utilisateur</span>
+						<span class="caret"></span>
+					</span>
+				</a>
+				<div class="clearfix"></div>
+
+				<div class="collapse in" id="collapseExample">
+					<ul class="nav">
+						<li>
+							<a @*href="<?= base_url('membre/Membre/Profile')?>"*@>
+								<span class="link-collapse">My Profile</span>
+							</a>
+						</li>
+						<li>
+							<a @*href="<?= base_url('membre/Membre/Profile')?>"*@>
+								<span class="link-collapse">Edit Profile</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+        <ul class="nav nav-primary">
+            <li class="nav-item active">
+                <a href="#">
+                    <i class="fas fa-home"></i>
+                    <p>Dashboard</p>
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a data-toggle="collapse" href="#forms">
+                    <i class="fas fa-users"></i>
+                    <p>Associations</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="forms">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="@Url.Action("Index","associations")">
+                                <span class="sub-item">Tous</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Indexe","associations")">
+                                <span class="sub-item">Associations actifs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","historique_asscociation")">
+                                <span class="sub-item">Associations inactifs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","employe_association")">
+                                <span class="sub-item">Statistique et rapport</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+
+                <a href="@Url.Action("Index","clients")">
+                    <i class="fas fa-layer-group"></i>
+                    <p>Clients</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a data-toggle="collapse" href="#forms">
+                    <i class="fas fa-users"></i>
+                    <p>Stations de lavage</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="forms">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="@Url.Action("Index","employe_association")">
+                                <span class="sub-item">Stations de lavage actifs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","employe_station_lavage")">
+                                <span class="sub-item">Stations de lavage inactifs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","station_lavage")">
+                                <span class="sub-item">Tous les deux</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item">
+
+                <a href="@Url.Action("Index","recoltes")">
+                    <i class="fas fa-layer-group"></i>
+                    <p>Recoltes</p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a data-toggle="collapse" href="#tables">
+                    <i class="fas fa-gifts"></i>
+                    <p>Employes</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="tables">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="@Url.Action("Index","employe_association")">
+                                <span class="sub-item">Employes des associtions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","employe_station_lavage")">
+                                <span class="sub-item">Employes des station de lavage</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="@Url.Action("Index","qualites")">
+                    <i class="fa fa-anchor"></i>
+                    <p>Qualite</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Utilisateurs</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Profile</p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <p> Logout</p>
+                </a>
+            </li>
+        </ul>
+	</div>
+</div>
+</div>

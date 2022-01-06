@@ -1,0 +1,850 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15487A86-170F-4AC4-B616-07F894108F4D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplicationrRecolte</RootNamespace>
+    <AssemblyName>WebApplicationrRecolte</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44365</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Highcharts, Version=9.2.2.2, Culture=neutral, PublicKeyToken=90b74bd27a557bd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Highsoft.Highcharts.9.2.2.2\lib\netstandard2.0\Highcharts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\associationsController.cs" />
+    <Compile Include="Controllers\clientsController.cs" />
+    <Compile Include="Controllers\historique_asscociationController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\station_lavageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\association.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\client.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\colline.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\commune.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\employe_association.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\employe_station_lavage.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\historique_asscociation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\historique_prix.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\historique_station.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\historique_utilisateur.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\profile.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\province.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qualite.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\recolte.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\station_lavage.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\utilisateur.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\zone.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\css\atlantis.css" />
+    <Content Include="Assets\css\atlantis.min.css" />
+    <Content Include="Assets\css\atlantis2.css" />
+    <Content Include="Assets\css\atlantis2.min.css" />
+    <Content Include="Assets\css\bootstrap.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\demo.css" />
+    <Content Include="Assets\css\fonts.css" />
+    <Content Include="Assets\css\fonts.min.css" />
+    <Content Include="Assets\css\index.html" />
+    <Content Include="Assets\css\index0389.html" />
+    <Content Include="Assets\css\index2a60.html" />
+    <Content Include="Assets\css\index350b.html" />
+    <Content Include="Assets\css\index38f9.html" />
+    <Content Include="Assets\css\index3dd6.html" />
+    <Content Include="Assets\css\index7dc1.html" />
+    <Content Include="Assets\css\index9a11.html" />
+    <Content Include="Assets\css\indexd4cd.html" />
+    <Content Include="Assets\css\owl.video.play.html" />
+    <Content Include="Assets\fonts\flaticon\flaticon.css" />
+    <Content Include="Assets\fonts\flaticon\flaticon.html" />
+    <Content Include="Assets\fonts\flaticon\Flaticon.svg" />
+    <Content Include="Assets\fonts\flaticon\index.html" />
+    <Content Include="Assets\fonts\flaticon\index0389.html" />
+    <Content Include="Assets\fonts\flaticon\index2a60.html" />
+    <Content Include="Assets\fonts\flaticon\index350b.html" />
+    <Content Include="Assets\fonts\flaticon\index38f9.html" />
+    <Content Include="Assets\fonts\flaticon\index3dd6.html" />
+    <Content Include="Assets\fonts\flaticon\index7dc1.html" />
+    <Content Include="Assets\fonts\flaticon\index9a11.html" />
+    <Content Include="Assets\fonts\flaticon\indexd4cd.html" />
+    <Content Include="Assets\fonts\fontawesome\fa-brands-400.svg" />
+    <Content Include="Assets\fonts\fontawesome\fa-regular-400.svg" />
+    <Content Include="Assets\fonts\fontawesome\fa-solid-900.svg" />
+    <Content Include="Assets\fonts\fontawesome\index.html" />
+    <Content Include="Assets\fonts\fontawesome\index0389.html" />
+    <Content Include="Assets\fonts\fontawesome\index2a60.html" />
+    <Content Include="Assets\fonts\fontawesome\index350b.html" />
+    <Content Include="Assets\fonts\fontawesome\index38f9.html" />
+    <Content Include="Assets\fonts\fontawesome\index3dd6.html" />
+    <Content Include="Assets\fonts\fontawesome\index7dc1.html" />
+    <Content Include="Assets\fonts\fontawesome\index9a11.html" />
+    <Content Include="Assets\fonts\fontawesome\indexd4cd.html" />
+    <Content Include="Assets\fonts\index.html" />
+    <Content Include="Assets\fonts\index0389.html" />
+    <Content Include="Assets\fonts\index2a60.html" />
+    <Content Include="Assets\fonts\index350b.html" />
+    <Content Include="Assets\fonts\index38f9.html" />
+    <Content Include="Assets\fonts\index3dd6.html" />
+    <Content Include="Assets\fonts\index7dc1.html" />
+    <Content Include="Assets\fonts\index9a11.html" />
+    <Content Include="Assets\fonts\indexd4cd.html" />
+    <Content Include="Assets\fonts\simple-line-icons\index.html" />
+    <Content Include="Assets\fonts\simple-line-icons\index0389.html" />
+    <Content Include="Assets\fonts\simple-line-icons\index2a60.html" />
+    <Content Include="Assets\fonts\simple-line-icons\index350b.html" />
+    <Content Include="Assets\fonts\simple-line-icons\index38f9.html" />
+    <Content Include="Assets\fonts\simple-line-icons\index3dd6.html" />
+    <Content Include="Assets\fonts\simple-line-icons\index7dc1.html" />
+    <Content Include="Assets\fonts\simple-line-icons\index9a11.html" />
+    <Content Include="Assets\fonts\simple-line-icons\indexd4cd.html" />
+    <Content Include="Assets\fonts\simple-line-icons\Simple-Line-Icons.svg" />
+    <Content Include="Assets\fonts\simple-line-icons\Simple-Line-Iconsb26c.svg" />
+    <Content Include="Assets\fonts\summernote\index.html" />
+    <Content Include="Assets\fonts\summernote\index0389.html" />
+    <Content Include="Assets\fonts\summernote\index2a60.html" />
+    <Content Include="Assets\fonts\summernote\index350b.html" />
+    <Content Include="Assets\fonts\summernote\index38f9.html" />
+    <Content Include="Assets\fonts\summernote\index3dd6.html" />
+    <Content Include="Assets\fonts\summernote\index7dc1.html" />
+    <Content Include="Assets\fonts\summernote\index9a11.html" />
+    <Content Include="Assets\fonts\summernote\indexd4cd.html" />
+    <Content Include="Assets\img\cafe.jpg" />
+    <Content Include="Assets\js\atlantis.js" />
+    <Content Include="Assets\js\atlantis.min.js" />
+    <Content Include="Assets\js\atlantis1.js" />
+    <Content Include="Assets\js\atlantis2.js" />
+    <Content Include="Assets\js\atlantis2.min.js" />
+    <Content Include="Assets\js\core\bootstrap.js" />
+    <Content Include="Assets\js\core\bootstrap.min.js" />
+    <Content Include="Assets\js\core\index.html" />
+    <Content Include="Assets\js\core\index0389.html" />
+    <Content Include="Assets\js\core\index2a60.html" />
+    <Content Include="Assets\js\core\index350b.html" />
+    <Content Include="Assets\js\core\index38f9.html" />
+    <Content Include="Assets\js\core\index3dd6.html" />
+    <Content Include="Assets\js\core\index7dc1.html" />
+    <Content Include="Assets\js\core\index9a11.html" />
+    <Content Include="Assets\js\core\indexd4cd.html" />
+    <Content Include="Assets\js\core\jquery.3.2.1.js" />
+    <Content Include="Assets\js\core\jquery.3.2.1.min.js" />
+    <Content Include="Assets\js\core\popper.js" />
+    <Content Include="Assets\js\core\popper.min.js" />
+    <Content Include="Assets\js\demo.js" />
+    <Content Include="Assets\js\demo2.js" />
+    <Content Include="Assets\js\index.html" />
+    <Content Include="Assets\js\index0389.html" />
+    <Content Include="Assets\js\index2a60.html" />
+    <Content Include="Assets\js\index350b.html" />
+    <Content Include="Assets\js\index38f9.html" />
+    <Content Include="Assets\js\index3dd6.html" />
+    <Content Include="Assets\js\index7dc1.html" />
+    <Content Include="Assets\js\index9a11.html" />
+    <Content Include="Assets\js\indexd4cd.html" />
+    <Content Include="Assets\js\main.js" />
+    <Content Include="Assets\js\plugin\atlantis.js" />
+    <Content Include="Assets\js\plugin\bootstrap-notify\bootstrap-notify.js" />
+    <Content Include="Assets\js\plugin\bootstrap-notify\bootstrap-notify.min.js" />
+    <Content Include="Assets\js\plugin\bootstrap-notify\index.html" />
+    <Content Include="Assets\js\plugin\bootstrap-notify\index0389.html" />
+    <Content Include="Assets\js\plugin\bootstrap-notify\index2a60.html" />
+    <Content Include="Assets\js\plugin\bootstrap-notify\index350b.html" />
+    <Content Include="Assets\js\plugin\bootstrap-notify\index38f9.html" />
+    <Content Include="Assets\js\plugin\bootstrap-notify\index3dd6.html" />
+    <Content Include="Assets\js\plugin\bootstrap-notify\index7dc1.html" />
+    <Content Include="Assets\js\plugin\bootstrap-notify\index9a11.html" />
+    <Content Include="Assets\js\plugin\bootstrap-notify\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\bootstrap-tagsinput\bootstrap-tagsinput.js" />
+    <Content Include="Assets\js\plugin\bootstrap-tagsinput\bootstrap-tagsinput.min.js" />
+    <Content Include="Assets\js\plugin\bootstrap-tagsinput\index.html" />
+    <Content Include="Assets\js\plugin\bootstrap-tagsinput\index0389.html" />
+    <Content Include="Assets\js\plugin\bootstrap-tagsinput\index2a60.html" />
+    <Content Include="Assets\js\plugin\bootstrap-tagsinput\index350b.html" />
+    <Content Include="Assets\js\plugin\bootstrap-tagsinput\index38f9.html" />
+    <Content Include="Assets\js\plugin\bootstrap-tagsinput\index3dd6.html" />
+    <Content Include="Assets\js\plugin\bootstrap-tagsinput\index7dc1.html" />
+    <Content Include="Assets\js\plugin\bootstrap-tagsinput\index9a11.html" />
+    <Content Include="Assets\js\plugin\bootstrap-tagsinput\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\bootstrap-toggle\bootstrap-toggle.js" />
+    <Content Include="Assets\js\plugin\bootstrap-toggle\bootstrap-toggle.min.js" />
+    <Content Include="Assets\js\plugin\bootstrap-toggle\index.html" />
+    <Content Include="Assets\js\plugin\bootstrap-toggle\index0389.html" />
+    <Content Include="Assets\js\plugin\bootstrap-toggle\index2a60.html" />
+    <Content Include="Assets\js\plugin\bootstrap-toggle\index350b.html" />
+    <Content Include="Assets\js\plugin\bootstrap-toggle\index38f9.html" />
+    <Content Include="Assets\js\plugin\bootstrap-toggle\index3dd6.html" />
+    <Content Include="Assets\js\plugin\bootstrap-toggle\index7dc1.html" />
+    <Content Include="Assets\js\plugin\bootstrap-toggle\index9a11.html" />
+    <Content Include="Assets\js\plugin\bootstrap-toggle\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\bootstrap-wizard\bootstrapwizard.js" />
+    <Content Include="Assets\js\plugin\bootstrap-wizard\index.html" />
+    <Content Include="Assets\js\plugin\bootstrap-wizard\index0389.html" />
+    <Content Include="Assets\js\plugin\bootstrap-wizard\index2a60.html" />
+    <Content Include="Assets\js\plugin\bootstrap-wizard\index350b.html" />
+    <Content Include="Assets\js\plugin\bootstrap-wizard\index38f9.html" />
+    <Content Include="Assets\js\plugin\bootstrap-wizard\index3dd6.html" />
+    <Content Include="Assets\js\plugin\bootstrap-wizard\index7dc1.html" />
+    <Content Include="Assets\js\plugin\bootstrap-wizard\index9a11.html" />
+    <Content Include="Assets\js\plugin\bootstrap-wizard\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\chart-circle\circles.js" />
+    <Content Include="Assets\js\plugin\chart-circle\circles.min.js" />
+    <Content Include="Assets\js\plugin\chart-circle\index.html" />
+    <Content Include="Assets\js\plugin\chart-circle\index0389.html" />
+    <Content Include="Assets\js\plugin\chart-circle\index2a60.html" />
+    <Content Include="Assets\js\plugin\chart-circle\index350b.html" />
+    <Content Include="Assets\js\plugin\chart-circle\index38f9.html" />
+    <Content Include="Assets\js\plugin\chart-circle\index3dd6.html" />
+    <Content Include="Assets\js\plugin\chart-circle\index7dc1.html" />
+    <Content Include="Assets\js\plugin\chart-circle\index9a11.html" />
+    <Content Include="Assets\js\plugin\chart-circle\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\chart.js\chart.js" />
+    <Content Include="Assets\js\plugin\chart.js\chart.min.js" />
+    <Content Include="Assets\js\plugin\chart.js\index.html" />
+    <Content Include="Assets\js\plugin\chart.js\index0389.html" />
+    <Content Include="Assets\js\plugin\chart.js\index2a60.html" />
+    <Content Include="Assets\js\plugin\chart.js\index350b.html" />
+    <Content Include="Assets\js\plugin\chart.js\index38f9.html" />
+    <Content Include="Assets\js\plugin\chart.js\index3dd6.html" />
+    <Content Include="Assets\js\plugin\chart.js\index7dc1.html" />
+    <Content Include="Assets\js\plugin\chart.js\index9a11.html" />
+    <Content Include="Assets\js\plugin\chart.js\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\datatables\datatables.js" />
+    <Content Include="Assets\js\plugin\datatables\datatables.min.js" />
+    <Content Include="Assets\js\plugin\datatables\index.html" />
+    <Content Include="Assets\js\plugin\datatables\index0389.html" />
+    <Content Include="Assets\js\plugin\datatables\index2a60.html" />
+    <Content Include="Assets\js\plugin\datatables\index350b.html" />
+    <Content Include="Assets\js\plugin\datatables\index38f9.html" />
+    <Content Include="Assets\js\plugin\datatables\index3dd6.html" />
+    <Content Include="Assets\js\plugin\datatables\index7dc1.html" />
+    <Content Include="Assets\js\plugin\datatables\index9a11.html" />
+    <Content Include="Assets\js\plugin\datatables\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\datepicker\bootstrap-datetimepicker.js" />
+    <Content Include="Assets\js\plugin\datepicker\bootstrap-datetimepicker.min.js" />
+    <Content Include="Assets\js\plugin\datepicker\index.html" />
+    <Content Include="Assets\js\plugin\datepicker\index0389.html" />
+    <Content Include="Assets\js\plugin\datepicker\index2a60.html" />
+    <Content Include="Assets\js\plugin\datepicker\index350b.html" />
+    <Content Include="Assets\js\plugin\datepicker\index38f9.html" />
+    <Content Include="Assets\js\plugin\datepicker\index3dd6.html" />
+    <Content Include="Assets\js\plugin\datepicker\index7dc1.html" />
+    <Content Include="Assets\js\plugin\datepicker\index9a11.html" />
+    <Content Include="Assets\js\plugin\datepicker\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\dropzone\dropzone.js" />
+    <Content Include="Assets\js\plugin\dropzone\dropzone.min.js" />
+    <Content Include="Assets\js\plugin\dropzone\index.html" />
+    <Content Include="Assets\js\plugin\dropzone\index0389.html" />
+    <Content Include="Assets\js\plugin\dropzone\index2a60.html" />
+    <Content Include="Assets\js\plugin\dropzone\index350b.html" />
+    <Content Include="Assets\js\plugin\dropzone\index38f9.html" />
+    <Content Include="Assets\js\plugin\dropzone\index3dd6.html" />
+    <Content Include="Assets\js\plugin\dropzone\index7dc1.html" />
+    <Content Include="Assets\js\plugin\dropzone\index9a11.html" />
+    <Content Include="Assets\js\plugin\dropzone\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\fullcalendar\fullcalendar.js" />
+    <Content Include="Assets\js\plugin\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Assets\js\plugin\fullcalendar\index.html" />
+    <Content Include="Assets\js\plugin\fullcalendar\index0389.html" />
+    <Content Include="Assets\js\plugin\fullcalendar\index2a60.html" />
+    <Content Include="Assets\js\plugin\fullcalendar\index350b.html" />
+    <Content Include="Assets\js\plugin\fullcalendar\index38f9.html" />
+    <Content Include="Assets\js\plugin\fullcalendar\index3dd6.html" />
+    <Content Include="Assets\js\plugin\fullcalendar\index7dc1.html" />
+    <Content Include="Assets\js\plugin\fullcalendar\index9a11.html" />
+    <Content Include="Assets\js\plugin\fullcalendar\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\gmaps\gmaps.js" />
+    <Content Include="Assets\js\plugin\gmaps\index.html" />
+    <Content Include="Assets\js\plugin\gmaps\index0389.html" />
+    <Content Include="Assets\js\plugin\gmaps\index2a60.html" />
+    <Content Include="Assets\js\plugin\gmaps\index350b.html" />
+    <Content Include="Assets\js\plugin\gmaps\index38f9.html" />
+    <Content Include="Assets\js\plugin\gmaps\index3dd6.html" />
+    <Content Include="Assets\js\plugin\gmaps\index7dc1.html" />
+    <Content Include="Assets\js\plugin\gmaps\index9a11.html" />
+    <Content Include="Assets\js\plugin\gmaps\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\index.html" />
+    <Content Include="Assets\js\plugin\index0389.html" />
+    <Content Include="Assets\js\plugin\index2a60.html" />
+    <Content Include="Assets\js\plugin\index350b.html" />
+    <Content Include="Assets\js\plugin\index38f9.html" />
+    <Content Include="Assets\js\plugin\index3dd6.html" />
+    <Content Include="Assets\js\plugin\index7dc1.html" />
+    <Content Include="Assets\js\plugin\index9a11.html" />
+    <Content Include="Assets\js\plugin\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\jquery-scrollbar\index.html" />
+    <Content Include="Assets\js\plugin\jquery-scrollbar\index0389.html" />
+    <Content Include="Assets\js\plugin\jquery-scrollbar\index2a60.html" />
+    <Content Include="Assets\js\plugin\jquery-scrollbar\index350b.html" />
+    <Content Include="Assets\js\plugin\jquery-scrollbar\index38f9.html" />
+    <Content Include="Assets\js\plugin\jquery-scrollbar\index3dd6.html" />
+    <Content Include="Assets\js\plugin\jquery-scrollbar\index7dc1.html" />
+    <Content Include="Assets\js\plugin\jquery-scrollbar\index9a11.html" />
+    <Content Include="Assets\js\plugin\jquery-scrollbar\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\jquery-scrollbar\jquery.scrollbar.js" />
+    <Content Include="Assets\js\plugin\jquery-scrollbar\jquery.scrollbar.min.js" />
+    <Content Include="Assets\js\plugin\jquery-ui-1.12.1.custom\index.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-1.12.1.custom\index0389.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-1.12.1.custom\index2a60.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-1.12.1.custom\index350b.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-1.12.1.custom\index38f9.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-1.12.1.custom\index3dd6.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-1.12.1.custom\index7dc1.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-1.12.1.custom\index9a11.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-1.12.1.custom\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-1.12.1.custom\jquery-ui.js" />
+    <Content Include="Assets\js\plugin\jquery-ui-1.12.1.custom\jquery-ui.min.js" />
+    <Content Include="Assets\js\plugin\jquery-ui-touch-punch\index.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-touch-punch\index0389.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-touch-punch\index2a60.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-touch-punch\index350b.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-touch-punch\index38f9.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-touch-punch\index3dd6.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-touch-punch\index7dc1.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-touch-punch\index9a11.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-touch-punch\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\jquery-ui-touch-punch\jquery.ui.touch-punch.js" />
+    <Content Include="Assets\js\plugin\jquery-ui-touch-punch\jquery.ui.touch-punch.min.js" />
+    <Content Include="Assets\js\plugin\jquery.magnific-popup\index.html" />
+    <Content Include="Assets\js\plugin\jquery.magnific-popup\index0389.html" />
+    <Content Include="Assets\js\plugin\jquery.magnific-popup\index2a60.html" />
+    <Content Include="Assets\js\plugin\jquery.magnific-popup\index350b.html" />
+    <Content Include="Assets\js\plugin\jquery.magnific-popup\index38f9.html" />
+    <Content Include="Assets\js\plugin\jquery.magnific-popup\index3dd6.html" />
+    <Content Include="Assets\js\plugin\jquery.magnific-popup\index7dc1.html" />
+    <Content Include="Assets\js\plugin\jquery.magnific-popup\index9a11.html" />
+    <Content Include="Assets\js\plugin\jquery.magnific-popup\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\jquery.magnific-popup\jquery.magnific-popup.js" />
+    <Content Include="Assets\js\plugin\jquery.magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="Assets\js\plugin\jquery.sparkline\index.html" />
+    <Content Include="Assets\js\plugin\jquery.sparkline\index0389.html" />
+    <Content Include="Assets\js\plugin\jquery.sparkline\index2a60.html" />
+    <Content Include="Assets\js\plugin\jquery.sparkline\index350b.html" />
+    <Content Include="Assets\js\plugin\jquery.sparkline\index38f9.html" />
+    <Content Include="Assets\js\plugin\jquery.sparkline\index3dd6.html" />
+    <Content Include="Assets\js\plugin\jquery.sparkline\index7dc1.html" />
+    <Content Include="Assets\js\plugin\jquery.sparkline\index9a11.html" />
+    <Content Include="Assets\js\plugin\jquery.sparkline\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\jquery.sparkline\jquery.sparkline.js" />
+    <Content Include="Assets\js\plugin\jquery.sparkline\jquery.sparkline.min.js" />
+    <Content Include="Assets\js\plugin\jquery.validate\index.html" />
+    <Content Include="Assets\js\plugin\jquery.validate\index0389.html" />
+    <Content Include="Assets\js\plugin\jquery.validate\index2a60.html" />
+    <Content Include="Assets\js\plugin\jquery.validate\index350b.html" />
+    <Content Include="Assets\js\plugin\jquery.validate\index38f9.html" />
+    <Content Include="Assets\js\plugin\jquery.validate\index3dd6.html" />
+    <Content Include="Assets\js\plugin\jquery.validate\index7dc1.html" />
+    <Content Include="Assets\js\plugin\jquery.validate\index9a11.html" />
+    <Content Include="Assets\js\plugin\jquery.validate\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\jquery.validate\jquery.validate.js" />
+    <Content Include="Assets\js\plugin\jquery.validate\jquery.validate.min.js" />
+    <Content Include="Assets\js\plugin\jqvmap\index.html" />
+    <Content Include="Assets\js\plugin\jqvmap\index0389.html" />
+    <Content Include="Assets\js\plugin\jqvmap\index2a60.html" />
+    <Content Include="Assets\js\plugin\jqvmap\index350b.html" />
+    <Content Include="Assets\js\plugin\jqvmap\index38f9.html" />
+    <Content Include="Assets\js\plugin\jqvmap\index3dd6.html" />
+    <Content Include="Assets\js\plugin\jqvmap\index7dc1.html" />
+    <Content Include="Assets\js\plugin\jqvmap\index9a11.html" />
+    <Content Include="Assets\js\plugin\jqvmap\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\jqvmap\jquery.vmap.js" />
+    <Content Include="Assets\js\plugin\jqvmap\jquery.vmap.min.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\index.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\index0389.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\index2a60.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\index350b.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\index38f9.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\index3dd6.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\index7dc1.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\index9a11.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\jquery.vmap.africa.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\jquery.vmap.asia.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\jquery.vmap.australia.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\jquery.vmap.europe.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\jquery.vmap.north-america.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\continents\jquery.vmap.south-america.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\index.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\index0389.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\index2a60.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\index350b.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\index38f9.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\index3dd6.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\index7dc1.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\index9a11.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.algeria.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.argentina.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.brazil.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.canada.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.croatia.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.europe.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.france.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.germany.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.greece.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.indonesia.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.iran.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.iraq.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.new_regions_france.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.russia.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.serbia.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.tunisia.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.turkey.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.ukraine.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.usa.counties.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.usa.districts.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.usa.js" />
+    <Content Include="Assets\js\plugin\jqvmap\maps\jquery.vmap.world.js" />
+    <Content Include="Assets\js\plugin\list.js\index.html" />
+    <Content Include="Assets\js\plugin\list.js\index0389.html" />
+    <Content Include="Assets\js\plugin\list.js\index2a60.html" />
+    <Content Include="Assets\js\plugin\list.js\index350b.html" />
+    <Content Include="Assets\js\plugin\list.js\index38f9.html" />
+    <Content Include="Assets\js\plugin\list.js\index3dd6.html" />
+    <Content Include="Assets\js\plugin\list.js\index7dc1.html" />
+    <Content Include="Assets\js\plugin\list.js\index9a11.html" />
+    <Content Include="Assets\js\plugin\list.js\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\list.js\list.min.js" />
+    <Content Include="Assets\js\plugin\moment\index.html" />
+    <Content Include="Assets\js\plugin\moment\index0389.html" />
+    <Content Include="Assets\js\plugin\moment\index2a60.html" />
+    <Content Include="Assets\js\plugin\moment\index350b.html" />
+    <Content Include="Assets\js\plugin\moment\index38f9.html" />
+    <Content Include="Assets\js\plugin\moment\index3dd6.html" />
+    <Content Include="Assets\js\plugin\moment\index7dc1.html" />
+    <Content Include="Assets\js\plugin\moment\index9a11.html" />
+    <Content Include="Assets\js\plugin\moment\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\moment\moment.js" />
+    <Content Include="Assets\js\plugin\moment\moment.min.js" />
+    <Content Include="Assets\js\plugin\owl-carousel\ajax-loader.gif" />
+    <Content Include="Assets\js\plugin\owl-carousel\index.html" />
+    <Content Include="Assets\js\plugin\owl-carousel\index0389.html" />
+    <Content Include="Assets\js\plugin\owl-carousel\index2a60.html" />
+    <Content Include="Assets\js\plugin\owl-carousel\index350b.html" />
+    <Content Include="Assets\js\plugin\owl-carousel\index38f9.html" />
+    <Content Include="Assets\js\plugin\owl-carousel\index3dd6.html" />
+    <Content Include="Assets\js\plugin\owl-carousel\index7dc1.html" />
+    <Content Include="Assets\js\plugin\owl-carousel\index9a11.html" />
+    <Content Include="Assets\js\plugin\owl-carousel\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\owl-carousel\owl.carousel.js" />
+    <Content Include="Assets\js\plugin\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Assets\js\plugin\owl-carousel\owl.video.play.png" />
+    <Content Include="Assets\js\plugin\select2\index.html" />
+    <Content Include="Assets\js\plugin\select2\index0389.html" />
+    <Content Include="Assets\js\plugin\select2\index2a60.html" />
+    <Content Include="Assets\js\plugin\select2\index350b.html" />
+    <Content Include="Assets\js\plugin\select2\index38f9.html" />
+    <Content Include="Assets\js\plugin\select2\index3dd6.html" />
+    <Content Include="Assets\js\plugin\select2\index7dc1.html" />
+    <Content Include="Assets\js\plugin\select2\index9a11.html" />
+    <Content Include="Assets\js\plugin\select2\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\select2\select2.full.js" />
+    <Content Include="Assets\js\plugin\select2\select2.full.min.js" />
+    <Content Include="Assets\js\plugin\sortable\index.html" />
+    <Content Include="Assets\js\plugin\sortable\index0389.html" />
+    <Content Include="Assets\js\plugin\sortable\index2a60.html" />
+    <Content Include="Assets\js\plugin\sortable\index350b.html" />
+    <Content Include="Assets\js\plugin\sortable\index38f9.html" />
+    <Content Include="Assets\js\plugin\sortable\index3dd6.html" />
+    <Content Include="Assets\js\plugin\sortable\index7dc1.html" />
+    <Content Include="Assets\js\plugin\sortable\index9a11.html" />
+    <Content Include="Assets\js\plugin\sortable\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\sortable\sortable.min.js" />
+    <Content Include="Assets\js\plugin\sticky-sidebar\index.html" />
+    <Content Include="Assets\js\plugin\sticky-sidebar\index0389.html" />
+    <Content Include="Assets\js\plugin\sticky-sidebar\index2a60.html" />
+    <Content Include="Assets\js\plugin\sticky-sidebar\index350b.html" />
+    <Content Include="Assets\js\plugin\sticky-sidebar\index38f9.html" />
+    <Content Include="Assets\js\plugin\sticky-sidebar\index3dd6.html" />
+    <Content Include="Assets\js\plugin\sticky-sidebar\index7dc1.html" />
+    <Content Include="Assets\js\plugin\sticky-sidebar\index9a11.html" />
+    <Content Include="Assets\js\plugin\sticky-sidebar\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\sticky-sidebar\sticky-sidebar.min.js" />
+    <Content Include="Assets\js\plugin\summernote\index.html" />
+    <Content Include="Assets\js\plugin\summernote\index0389.html" />
+    <Content Include="Assets\js\plugin\summernote\index2a60.html" />
+    <Content Include="Assets\js\plugin\summernote\index350b.html" />
+    <Content Include="Assets\js\plugin\summernote\index38f9.html" />
+    <Content Include="Assets\js\plugin\summernote\index3dd6.html" />
+    <Content Include="Assets\js\plugin\summernote\index7dc1.html" />
+    <Content Include="Assets\js\plugin\summernote\index9a11.html" />
+    <Content Include="Assets\js\plugin\summernote\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\summernote\summernote-bs4.js" />
+    <Content Include="Assets\js\plugin\summernote\summernote-bs4.min.js" />
+    <Content Include="Assets\js\plugin\sweetalert\index.html" />
+    <Content Include="Assets\js\plugin\sweetalert\index0389.html" />
+    <Content Include="Assets\js\plugin\sweetalert\index2a60.html" />
+    <Content Include="Assets\js\plugin\sweetalert\index350b.html" />
+    <Content Include="Assets\js\plugin\sweetalert\index38f9.html" />
+    <Content Include="Assets\js\plugin\sweetalert\index3dd6.html" />
+    <Content Include="Assets\js\plugin\sweetalert\index7dc1.html" />
+    <Content Include="Assets\js\plugin\sweetalert\index9a11.html" />
+    <Content Include="Assets\js\plugin\sweetalert\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\sweetalert\sweetalert.js" />
+    <Content Include="Assets\js\plugin\sweetalert\sweetalert.min.js" />
+    <Content Include="Assets\js\plugin\webfont\index.html" />
+    <Content Include="Assets\js\plugin\webfont\index0389.html" />
+    <Content Include="Assets\js\plugin\webfont\index2a60.html" />
+    <Content Include="Assets\js\plugin\webfont\index350b.html" />
+    <Content Include="Assets\js\plugin\webfont\index38f9.html" />
+    <Content Include="Assets\js\plugin\webfont\index3dd6.html" />
+    <Content Include="Assets\js\plugin\webfont\index7dc1.html" />
+    <Content Include="Assets\js\plugin\webfont\index9a11.html" />
+    <Content Include="Assets\js\plugin\webfont\indexd4cd.html" />
+    <Content Include="Assets\js\plugin\webfont\webfont.js" />
+    <Content Include="Assets\js\plugin\webfont\webfont.min.js" />
+    <Content Include="Assets\js\setting-demo.js" />
+    <Content Include="Assets\js\setting-demo2.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Assets\css\atlantis.css.map" />
+    <Content Include="Assets\css\atlantis2.css.map" />
+    <Content Include="Assets\fonts\flaticon\Flaticon.eot" />
+    <Content Include="Assets\fonts\flaticon\Flaticon.ttf" />
+    <Content Include="Assets\fonts\flaticon\Flaticon.woff" />
+    <Content Include="Assets\fonts\flaticon\Flaticond41d.eot" />
+    <Content Include="Assets\fonts\flaticon\_flaticon.scss" />
+    <Content Include="Assets\fonts\fontawesome\fa-brands-400.eot" />
+    <Content Include="Assets\fonts\fontawesome\fa-brands-400.ttf" />
+    <Content Include="Assets\fonts\fontawesome\fa-brands-400.woff" />
+    <Content Include="Assets\fonts\fontawesome\fa-brands-400.woff2" />
+    <Content Include="Assets\fonts\fontawesome\fa-brands-400d41d.eot" />
+    <Content Include="Assets\fonts\fontawesome\fa-regular-400.eot" />
+    <Content Include="Assets\fonts\fontawesome\fa-regular-400.ttf" />
+    <Content Include="Assets\fonts\fontawesome\fa-regular-400.woff" />
+    <Content Include="Assets\fonts\fontawesome\fa-regular-400.woff2" />
+    <Content Include="Assets\fonts\fontawesome\fa-regular-400d41d.eot" />
+    <Content Include="Assets\fonts\fontawesome\fa-solid-900.eot" />
+    <Content Include="Assets\fonts\fontawesome\fa-solid-900.ttf" />
+    <Content Include="Assets\fonts\fontawesome\fa-solid-900.woff" />
+    <Content Include="Assets\fonts\fontawesome\fa-solid-900.woff2" />
+    <Content Include="Assets\fonts\fontawesome\fa-solid-900d41d.eot" />
+    <Content Include="Assets\fonts\simple-line-icons\Simple-Line-Icons.eot" />
+    <Content Include="Assets\fonts\simple-line-icons\Simple-Line-Icons.ttf" />
+    <Content Include="Assets\fonts\simple-line-icons\Simple-Line-Icons.woff" />
+    <Content Include="Assets\fonts\simple-line-icons\Simple-Line-Icons.woff2" />
+    <Content Include="Assets\fonts\simple-line-icons\Simple-Line-Iconsb26c.eot" />
+    <Content Include="Assets\fonts\simple-line-icons\Simple-Line-Iconsb26c.ttf" />
+    <Content Include="Assets\fonts\simple-line-icons\Simple-Line-Iconsb26c.woff" />
+    <Content Include="Assets\fonts\simple-line-icons\Simple-Line-Iconsb26c.woff2" />
+    <Content Include="Assets\fonts\summernote\summernote.eot" />
+    <Content Include="Assets\fonts\summernote\summernote.ttf" />
+    <Content Include="Assets\fonts\summernote\summernote.woff" />
+    <Content Include="Assets\fonts\summernote\summernote4c4d.eot" />
+    <Content Include="Assets\fonts\summernote\summernote4c4d.ttf" />
+    <Content Include="Assets\fonts\summernote\summernote4c4d.woff" />
+    <Content Include="Assets\fonts\summernote\summernoted41d.eot" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\charts.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Layouts\_Default.cshtml" />
+    <Content Include="Views\Partials\_Footer.cshtml" />
+    <Content Include="Views\Partials\_Header.cshtml" />
+    <Content Include="Views\Partials\_SidebarHead.cshtml" />
+    <Content Include="Views\Partials\_SidebarMenu.cshtml" />
+    <Content Include="Views\Partials\_SidebarRight.cshtml" />
+    <Content Include="Views\Partials\_SidebarSetting.cshtml" />
+    <Content Include="Views\associations\Create.cshtml" />
+    <Content Include="Views\associations\Delete.cshtml" />
+    <Content Include="Views\associations\Details.cshtml" />
+    <Content Include="Views\associations\Edit.cshtml" />
+    <Content Include="Views\associations\Index1.cshtml" />
+    <Content Include="Views\historique_asscociation\Create.cshtml" />
+    <Content Include="Views\historique_asscociation\Delete.cshtml" />
+    <Content Include="Views\historique_asscociation\Details.cshtml" />
+    <Content Include="Views\historique_asscociation\Edit.cshtml" />
+    <Content Include="Views\historique_asscociation\Index.cshtml" />
+    <Content Include="Views\associations\Indexe.cshtml" />
+    <Content Include="Views\clients\Create.cshtml" />
+    <Content Include="Views\clients\Delete.cshtml" />
+    <Content Include="Views\clients\Details.cshtml" />
+    <Content Include="Views\clients\Edit.cshtml" />
+    <Content Include="Views\clients\Index.cshtml" />
+    <Content Include="Views\associations\ColumnBasic.cshtml" />
+    <Content Include="Views\station_lavage\Create.cshtml" />
+    <Content Include="Views\station_lavage\Delete.cshtml" />
+    <Content Include="Views\station_lavage\Details.cshtml" />
+    <Content Include="Views\station_lavage\Edit.cshtml" />
+    <Content Include="Views\station_lavage\Index.cshtml" />
+    <Content Include="Views\associations\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Assets\photo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57583</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44365/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
